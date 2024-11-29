@@ -1,0 +1,25 @@
+uuid: 69df7b21-c15b-4868-a31a-ee22668e564d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:card_cta:840b5ff3-0f74-46e3-aa48-d15c8d3bf8c2'
+  module:
+    - block_content
+  theme:
+    - port_theme
+id: 1_on_1_training
+theme: port_theme
+region: footer_above
+weight: 0
+provider: null
+plugin: 'block_content:840b5ff3-0f74-46e3-aa48-d15c8d3bf8c2'
+settings:
+  id: 'block_content:840b5ff3-0f74-46e3-aa48-d15c8d3bf8c2'
+  label: 'Get personalized 1 on 1 Drupal training with a Drupal Grand Master'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

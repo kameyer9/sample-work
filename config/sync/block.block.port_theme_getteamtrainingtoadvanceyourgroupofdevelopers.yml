@@ -1,0 +1,25 @@
+uuid: 0ba9ec95-fd27-4506-8d89-bb9694d78331
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:card_cta:484b99d0-534f-4a94-881c-75cb336664c5'
+  module:
+    - block_content
+  theme:
+    - port_theme
+id: port_theme_getteamtrainingtoadvanceyourgroupofdevelopers
+theme: port_theme
+region: footer_above
+weight: 0
+provider: null
+plugin: 'block_content:484b99d0-534f-4a94-881c-75cb336664c5'
+settings:
+  id: 'block_content:484b99d0-534f-4a94-881c-75cb336664c5'
+  label: 'Get team training to advance your group of developers'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
