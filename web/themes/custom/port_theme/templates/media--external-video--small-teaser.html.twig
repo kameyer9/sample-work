@@ -1,0 +1,10 @@
+<div{{ attributes }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  {% include '@port_theme/components/small_teaser/_small_teaser.html.twig' with {
+    thumbnail: content.thumbnail,
+    title: content.name.0['#context']['value']|slice(0, 60)|split(' ')|slice(0, -1)|join(' ') ~ (content.name.0['#context']['value']|length > 60 ? '...' : ''),
+    url: '/media/' ~ media.mid.0.value,
+} %}
+{{ content|without('thumbnail', 'name') }}
+</div>
