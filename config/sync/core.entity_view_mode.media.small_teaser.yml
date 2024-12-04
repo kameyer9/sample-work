@@ -1,0 +1,11 @@
+uuid: 4714b904-89ff-4fce-b980-d37cd5943e21
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.small_teaser
+label: 'Small Teaser'
+description: ''
+targetEntityType: media
+cache: true
