@@ -1,0 +1,36 @@
+uuid: f6cdb609-f874-440b-8b6b-5e684ada66e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.curated_playlist.body
+    - field.field.node.curated_playlist.field_conference
+    - field.field.node.curated_playlist.field_curated_by
+    - field.field.node.curated_playlist.field_curated_videos
+    - field.field.node.curated_playlist.field_sponsor
+    - field.field.node.curated_playlist.field_youtube_playlist_id
+    - node.type.curated_playlist
+  module:
+    - text
+    - user
+id: node.curated_playlist.teaser
+targetEntityType: node
+bundle: curated_playlist
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_conference: true
+  field_curated_by: true
+  field_curated_videos: true
+  field_sponsor: true
+  field_youtube_playlist_id: true
+  links: true
