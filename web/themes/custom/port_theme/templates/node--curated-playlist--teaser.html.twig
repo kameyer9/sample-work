@@ -1,0 +1,11 @@
+<div{{ attributes }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  {% include '@port_theme/components/event_teaser/_event_teaser.html.twig' with {
+  thumbnail: demo_image_html,
+  title: label,
+  subtitle: content.body,
+  url: content.field_youtube_playlist_id,
+} %}
+{{ content|without('body') }}
+</div>
