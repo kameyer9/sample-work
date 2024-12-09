@@ -419,4 +419,181 @@ header > div.region-header #block-port-theme-main-menu .menu li a.is-active:hove
   }
 }
 
+<<<<<<< HEAD
+=======
+div.region.region-breadcrumb {
+  padding: 15px 5%;
+  margin-top: 20px;
+}
+@media screen and (min-width: 1280px) {
+  div.region.region-breadcrumb {
+    margin-top: 30px;
+    padding: 20px 10%;
+  }
+}
+div.region.region-breadcrumb #block-port-theme-breadcrumbs > nav {
+  padding-bottom: 0;
+}
+div.region.region-breadcrumb #block-port-theme-breadcrumbs > nav > ol {
+  background-color: rgba(12, 155, 207, 0.1019607843);
+  display: inline;
+}
+div.region.region-breadcrumb #block-port-theme-breadcrumbs > nav > ol > li:first-child::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 300;
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: #00598e;
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M480 0c-17.7 0-32 14.3-32 32l0 160 0 320 64 0 0-320 112 0c8.8 0 16-7.2 16-16l0-128c0-8.8-7.2-16-16-16L512 32c0-17.7-14.3-32-32-32zM416 159L276.8 39.7c-12-10.3-29.7-10.3-41.7 0l-224 192C1 240.4-2.7 254.5 2 267.1S18.6 288 32 288l32 0 0 192c0 17.7 14.3 32 32 32l64 0c17.7 0 32-14.3 32-32l0-96c0-17.7 14.3-32 32-32l64 0c17.7 0 32 14.3 32 32l0 96c0 17.7 14.3 32 32 32l64.7 0 .2 0-1 0 0-353z"/></svg>') no-repeat;
+  -webkit-mask-size: contain;
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M480 0c-17.7 0-32 14.3-32 32l0 160 0 320 64 0 0-320 112 0c8.8 0 16-7.2 16-16l0-128c0-8.8-7.2-16-16-16L512 32c0-17.7-14.3-32-32-32zM416 159L276.8 39.7c-12-10.3-29.7-10.3-41.7 0l-224 192C1 240.4-2.7 254.5 2 267.1S18.6 288 32 288l32 0 0 192c0 17.7 14.3 32 32 32l64 0c17.7 0 32-14.3 32-32l0-96c0-17.7 14.3-32 32-32l64 0c17.7 0 32 14.3 32 32l0 96c0 17.7 14.3 32 32 32l64.7 0 .2 0-1 0 0-353z"/></svg>') no-repeat;
+  mask-size: contain;
+  vertical-align: middle;
+}
+div.region.region-breadcrumb #block-port-theme-breadcrumbs > nav > ol > li:not(:first-child)::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 300;
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 14px;
+  background-color: #00598e;
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z"/></svg>') no-repeat;
+  -webkit-mask-size: contain;
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z"/></svg>') no-repeat;
+  mask-size: contain;
+  vertical-align: middle;
+}
+div.region.region-breadcrumb #block-port-theme-breadcrumbs > nav > ol > li > a {
+  display: inline;
+  text-decoration: none;
+  align-self: flex-start;
+  font-size: 15px;
+  padding: 0 6px;
+  color: #00598e;
+}
+div.region.region-breadcrumb #block-port-theme-breadcrumbs > nav > ol > li > a:hover {
+  color: #081f2c;
+}
+
+.region.region-highlighted {
+  padding: 20px 5%;
+}
+@media screen and (min-width: 1280px) {
+  .region.region-highlighted {
+    padding: 30px 10% 10px;
+  }
+}
+.region.region-highlighted > nav > ul {
+  margin-bottom: 0;
+}
+
+.main-container {
+  overflow: hidden;
+  padding: 2% 5% 10%;
+}
+@media (min-width: 1280px) {
+  .main-container {
+    padding: 2% 10% 10%;
+  }
+}
+.main-container.has-region-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+.main-container.has-region-sidebar > .layout-content {
+  flex: 7.5;
+}
+.main-container.has-region-sidebar > .layout-sidebar {
+  flex: 2.5;
+}
+@media screen and (max-width: 991px) {
+  .main-container.has-region-sidebar {
+    flex-direction: column;
+    gap: 1em;
+  }
+  .main-container.has-region-sidebar > .layout-content {
+    flex: 1;
+  }
+  .main-container.has-region-sidebar > .layout-sidebar {
+    flex: 1;
+  }
+}
+
+.featured-section {
+  width: calc(100vw - 7px);
+  margin-left: calc(-50vw + 50% + 7px);
+  position: relative;
+  min-height: 220px;
+  background-color: rgba(18, 81, 228, 0.1019607843);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.featured-section .layout__region {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.featured-section::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 400px;
+  height: 170%;
+  bottom: 0;
+  background: url("../images/6733d2e93f072bc456748a88_drupaltv-mark@2x.png") no-repeat center center;
+  background-size: 400px auto;
+  opacity: 0.1;
+}
+
+#contact-message-feedback-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#contact-message-feedback-form .js-form-required {
+  display: flex;
+  font-size: 18px;
+  line-height: 25px;
+  color: #333;
+  font-family: "Brix sans Light", sans-serif;
+}
+#contact-message-feedback-form .form-text {
+  height: 38px;
+}
+#contact-message-feedback-form .form-email {
+  height: 38px;
+}
+#contact-message-feedback-form #edit-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: end;
+}
+#contact-message-feedback-form #edit-actions .button {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #1251e4;
+  color: #fff;
+  margin: 0 10px;
+  padding: 8px 20px;
+  border-radius: 50px;
+  transition: all 400ms ease-in-out;
+}
+#contact-message-feedback-form #edit-actions .button:hover {
+  background-color: rgba(18, 81, 228, 0.09);
+  color: #081f2c;
+}
+
+>>>>>>> 90f751a (225 - sass work in progress)
 /*# sourceMappingURL=style.css.map */

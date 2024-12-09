@@ -1,0 +1,499 @@
+// Import Font
+@import url("https://fonts.googleapis.com/css2?family=Brix+Sans+Light:wght@400;700&display=swap");
+
+// Variables
+$font-main: "Brix sans", sans-serif;
+$font-secondary: "Brix sans Light", sans-serif;
+$color-primary: #081f2c;
+$color-secondary: #00598e;
+$color-hover-bg: rgba(18, 81, 228, 0.09);
+$color-link-border-active: #1251e4;
+$color-link-border-active-hover: #0d3aa5;
+$menu-breakpoint: 800px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$soft-blue-bg: #e8edfc;
+$color-font: #5a5a5a;
+$color-font-dark: #333;
+
+@import "./import";
+
+// Base styles
+* {
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+}
+
+body {
+  background: white;
+  margin-bottom: 10px;
+  color: #5a5a5a;
+  font-size: 17px;
+  line-height: 25px;
+  font-family: $font-main;
+}
+
+h1,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-secondary;
+  color: $color-primary;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 52px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+h5,
+h6 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+a {
+  color: $color-secondary;
+  font-size: 17px;
+  font-weight: 400;
+  transition: all 400ms ease-in-out;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+
+// Header menu styling
+header > div.region-header {
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
+  padding: 16px 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  #block-port-theme-site-branding {
+    margin-right: auto;
+
+    a {
+      display: flex;
+    }
+    img {
+      max-width: 250px;
+    }
+  }
+
+  #block-port-theme-main-menu .menu {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+
+    li {
+      a {
+        display: inline-block;
+        text-decoration: none;
+        margin: 0 10px;
+        padding: 8px;
+        border-bottom: 2px solid transparent;
+        border-radius: 50px;
+        background-color: transparent;
+        transition: all 400ms ease-in-out;
+
+        &:hover {
+          background-color: $color-hover-bg;
+          color: $color-primary;
+        }
+
+        &.is-active {
+          border-bottom: 2px solid $color-link-border-active;
+          color: $color-primary;
+          border-radius: 0;
+
+          &:hover {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  // Mobile styles
+  @media (max-width: $menu-breakpoint) {
+    flex-direction: column;
+    align-items: center;
+
+    #block-port-theme-site-branding {
+      margin-right: initial;
+      height: 70px;
+    }
+
+    #block-port-theme-main-menu .menu {
+      flex-direction: column;
+      width: 100%;
+
+      li {
+        width: 100%;
+        text-align: center;
+        margin: 2.5px 0;
+
+        a {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// FOOTER ABOVE
+
+$color-footer-bg: #dbdbdb;
+.region-footer-above {
+  background-color: $color-footer-bg;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 100px 10% 150px;
+  gap: 4%;
+  > div {
+    display: flex;
+    flex-basis: 50%;
+  }
+
+  @media screen and (max-width: 1055px) {
+    padding: 75px 5% 125px;
+    gap: 3%;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 65px 10% 85px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    row-gap: 30px;
+    align-items: center;
+  }
+}
+
+// Footer Separator -- Arch
+.footer-separator {
+  svg {
+    position: absolute;
+    margin-top: -40px;
+
+    @media (max-width: $screen-lg) {
+      margin-top: -20px;
+    }
+  }
+}
+
+.region-footer {
+  color: $color-font;
+  background-color: $soft-blue-bg;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px 10% 50px;
+  h2 {
+    font-size: 24px;
+    line-height: 28px;
+    color: #5a5a5a;
+    font-weight: 400;
+  }
+  p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  ul.menu {
+    margin-left: 0;
+    li {
+      margin-bottom: 10px;
+      margin-top: 24px;
+      line-height: 28px;
+      a {
+        color: $color-link-border-active;
+        text-decoration: underline;
+        font-size: 17px;
+      }
+    }
+  }
+  .form-submit {
+    color: white;
+    margin-top: 12px;
+    padding: 9px 16px;
+    border-radius: 50px;
+    background-color: #1251e4;
+    font-size: 18px;
+    border: none;
+  }
+
+  // START helper placeholder styles
+
+  > *:nth-child(1) {
+    flex-basis: 32%;
+  }
+  > *:nth-child(2) {
+    flex-basis: 27%;
+  }
+  > *:nth-child(3) {
+    flex-basis: 28%;
+  }
+
+  > * {
+    height: 175px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    box-sizing: border-box;
+  }
+  // END helper styles
+
+  @media screen and (max-width: 991px) {
+    padding-left: 5%;
+    padding-right: 5%;
+    justify-content: space-around;
+
+    // START helper styles
+    > *:nth-child(1) {
+      flex-basis: 100%;
+    }
+    > *:nth-child(2) {
+      flex-basis: 45%;
+    }
+    > *:nth-child(3) {
+      flex-basis: 45%;
+    }
+    // END helper styles
+  }
+  @media screen and (max-width: 767px) {
+    flex-flow: column;
+    padding-left: 10%;
+    padding-right: 10%;
+    gap: 20px;
+
+    // START helper styles
+    > * {
+      width: 100%;
+    }
+    // END helper styles
+  }
+}
+
+
+// breadcrumb region styling
+
+div.region.region-breadcrumb {
+  padding: 15px 5%;
+  margin-top: 20px;
+   @media screen and (min-width: 1280px) {
+    margin-top: 30px;
+    padding: 20px 10%;
+
+  }
+
+  #block-port-theme-breadcrumbs > nav {
+    padding-bottom: 0;
+      > ol {
+      background-color: #0c9bcf1a;
+      display: inline;
+      > li {
+        &:first-child::before {
+          font-family: "Font Awesome 6 Free";
+          font-weight: 300;
+          content: "";
+          display: inline-block;
+          width: 18px;
+          height: 18px;
+          background-color: #00598e;
+          // compatibility for Chrome and Safari
+          -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M480 0c-17.7 0-32 14.3-32 32l0 160 0 320 64 0 0-320 112 0c8.8 0 16-7.2 16-16l0-128c0-8.8-7.2-16-16-16L512 32c0-17.7-14.3-32-32-32zM416 159L276.8 39.7c-12-10.3-29.7-10.3-41.7 0l-224 192C1 240.4-2.7 254.5 2 267.1S18.6 288 32 288l32 0 0 192c0 17.7 14.3 32 32 32l64 0c17.7 0 32-14.3 32-32l0-96c0-17.7 14.3-32 32-32l64 0c17.7 0 32 14.3 32 32l0 96c0 17.7 14.3 32 32 32l64.7 0 .2 0-1 0 0-353z"/></svg>') no-repeat;
+          -webkit-mask-size: contain;
+          // compatibility for  Firefox and Edge
+          mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M480 0c-17.7 0-32 14.3-32 32l0 160 0 320 64 0 0-320 112 0c8.8 0 16-7.2 16-16l0-128c0-8.8-7.2-16-16-16L512 32c0-17.7-14.3-32-32-32zM416 159L276.8 39.7c-12-10.3-29.7-10.3-41.7 0l-224 192C1 240.4-2.7 254.5 2 267.1S18.6 288 32 288l32 0 0 192c0 17.7 14.3 32 32 32l64 0c17.7 0 32-14.3 32-32l0-96c0-17.7 14.3-32 32-32l64 0c17.7 0 32 14.3 32 32l0 96c0 17.7 14.3 32 32 32l64.7 0 .2 0-1 0 0-353z"/></svg>') no-repeat;
+          mask-size: contain;
+          vertical-align: middle;
+        }
+        &:not(:first-child)::before {
+          font-family: "Font Awesome 6 Free";
+          font-weight: 300;
+          content: "";
+          display: inline-block;
+          width: 7px;
+          height: 14px;
+          background-color: #00598e;
+          // compatibility for Chrome and Safari
+          -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z"/></svg>') no-repeat;
+          -webkit-mask-size: contain;
+          // compatibility for  Firefox and Edge
+          mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z"/></svg>') no-repeat;
+          mask-size: contain;
+          vertical-align: middle;
+        }
+        > a {
+          display: inline;
+          text-decoration: none;
+          align-self: flex-start;
+          // background-color: #0c9bcf1a;
+          font-size: 15px;
+          // border-radius: 20px;
+          // margin-right: 12px;
+          padding: 0 6px;
+          color: #00598e;
+          &:hover {
+            color: #081f2c;
+          }
+        }
+      }
+    }
+  }
+}
+// highlighted region
+
+.region.region-highlighted {
+   padding: 20px 5%;
+   @media screen and (min-width: 1280px) {
+    padding: 30px 10% 10px;
+  }
+  > nav > ul {
+    margin-bottom: 0;
+  }
+}
+
+
+// Main container styling
+
+.main-container {
+  overflow: hidden;
+  padding: 2% 5% 10%;
+  @media (min-width: 1280px) {
+    padding: 2% 10% 10%;
+  }
+
+  // Sidebar region styling
+
+  &.has-region-sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    >.layout-content {
+      flex: 7.5;
+    }
+    > .layout-sidebar {
+      flex: 2.5;
+
+    }
+    @media screen and (max-width: 991px) {
+      flex-direction: column;
+      gap: 1em;
+      >.layout-content {
+        flex: 1;
+      }
+      > .layout-sidebar {
+        flex: 1;
+      }
+    }
+  }
+}
+
+// Featured section styling
+
+.featured-section {
+  width: calc(100vw - 7px);
+  margin-left: calc(-50vw + (50% + 7px));
+  position: relative;
+  min-height: 220px;
+  background-color: #1251e41a;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .layout__region {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 400px;
+    height: 170%;
+    bottom: 0;
+    background: url('../images/6733d2e93f072bc456748a88_drupaltv-mark@2x.png') no-repeat center center;
+    background-size: 400px auto;
+    opacity: 0.1;
+  }
+}
+
+
+// Contact Us Styling
+
+#contact-message-feedback-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .js-form-required {
+    display: flex;
+    font-size: 18px;
+    line-height: 25px;
+    color: $color-font-dark;
+    font-family: $font-secondary;
+  }
+
+  .form-text {
+    height: 38px;
+  }
+
+  .form-email {
+    height: 38px;
+  }
+
+  #edit-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .button {
+      display: inline-block;
+      text-decoration: none;
+      background-color: #1251e4;
+      color: #fff;
+      margin: 0 10px;
+      padding: 8px 20px;
+      border-radius: 50px;
+      transition: all 400ms ease-in-out;
+
+      &:hover {
+        background-color: $color-hover-bg;
+        color: $color-primary;
+        }
+      }
+  }
+}
+
+
