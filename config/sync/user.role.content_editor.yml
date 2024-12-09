@@ -1,0 +1,101 @@
+uuid: 0d8ae50f-de1c-427a-b4f8-833435a5b114
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - core.entity_view_display.node.page.full
+    - filter.format.full_html
+    - filter.format.restricted_html
+    - media.type.external_video
+    - media.type.image
+    - media.type.video
+    - node.type.article
+    - node.type.conference
+    - node.type.page
+    - node.type.sponsor
+    - taxonomy.vocabulary.event_name
+    - taxonomy.vocabulary.event_type
+    - taxonomy.vocabulary.tags
+  module:
+    - block_content
+    - contextual
+    - file
+    - filter
+    - layout_builder
+    - media
+    - node
+    - path
+    - system
+    - taxonomy
+    - toolbar
+_core:
+  default_config_hash: e_wG1u7SrGaJbY2-Szgbgl-c8T3kdirU3uTNq2c_QJQ
+id: content_editor
+label: 'Content editor'
+weight: 2
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access block library'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access media overview'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'administer url aliases'
+  - 'configure editable page node layout overrides'
+  - 'create and edit custom blocks'
+  - 'create article content'
+  - 'create basic block content'
+  - 'create conference content'
+  - 'create image media'
+  - 'create media'
+  - 'create page content'
+  - 'create sponsor content'
+  - 'create terms in event_name'
+  - 'create terms in event_type'
+  - 'create terms in tags'
+  - 'create url aliases'
+  - 'create video media'
+  - 'delete article revisions'
+  - 'delete conference revisions'
+  - 'delete own article content'
+  - 'delete own conference content'
+  - 'delete own external_video media'
+  - 'delete own files'
+  - 'delete own image media'
+  - 'delete own page content'
+  - 'delete own sponsor content'
+  - 'delete own video media'
+  - 'delete page revisions'
+  - 'delete sponsor revisions'
+  - 'edit any article content'
+  - 'edit any basic block content'
+  - 'edit any conference content'
+  - 'edit any external_video media'
+  - 'edit any image media'
+  - 'edit any page content'
+  - 'edit any sponsor content'
+  - 'edit own article content'
+  - 'edit own page content'
+  - 'edit terms in event_name'
+  - 'edit terms in event_type'
+  - 'edit terms in tags'
+  - 'revert all revisions'
+  - 'revert any basic block content revisions'
+  - 'update any media'
+  - 'use text format full_html'
+  - 'use text format restricted_html'
+  - 'view all revisions'
+  - 'view all taxonomy revisions'
+  - 'view any basic block content history'
+  - 'view any external_video media revisions'
+  - 'view any image media revisions'
+  - 'view any video media revisions'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view the administration theme'
+  - 'view vocabulary labels'
