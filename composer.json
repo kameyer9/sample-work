@@ -1,0 +1,117 @@
+{
+    "name": "drupal/recommended-project",
+    "description": "Project template for Drupal 8 projects with a relocated document root",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/drupal",
+    "support": {
+        "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
+        "chat": "https://www.drupal.org/node/314178"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "path",
+            "url": "upstream-configuration"
+        }
+    ],
+    "require": {
+        "composer/installers": "^1.9",
+        "cweagans/composer-patches": "^1.7",
+        "drupal/address": "^2.0",
+        "drupal/admin_toolbar": "^3.5",
+        "drupal/antibot": "^2.0",
+        "drupal/contact_block": "^2.0",
+        "drupal/core-composer-scaffold": "~11.0",
+        "drupal/core-dev": "~11.0",
+        "drupal/core-project-message": "~11.0",
+        "drupal/core-recommended": "^11.0",
+        "drupal/gin": "^3.0",
+        "drupal/layout_builder_styles": "^2.1",
+        "drupal/pathauto": "^1.0",
+        "drupal/responsive_menus": "^2.0@beta",
+        "drush/drush": "*",
+        "mglaman/composer-drupal-lenient": "^1.0",
+        "pantheon-systems/drupal-integrations": "^11",
+        "pantheon-upstreams/upstream-configuration": "dev-main"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "mglaman/composer-drupal-lenient": true,
+            "php-http/discovery": true,
+            "phpstan/extension-installer": true,
+            "tbachert/spi": true
+        }
+    },
+    "extra": {
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "./web"
+            },
+            "allowed-packages": ["pantheon-systems/drupal-integrations"],
+            "file-mapping": {
+                "[project-root]/.editorconfig": false,
+                "[project-root]/pantheon.upstream.yml": false,
+                "[project-root]/.gitattributes": false
+            }
+        },
+        "installer-paths": {
+            "web/core": ["type:drupal-core"],
+            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
+            "web/modules/custom/{$name}": ["type:drupal-custom-module"],
+            "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
+        },
+        "drupal-core-project-message": {
+            "include-keys": ["homepage", "support"],
+            "post-create-project-cmd-message": [
+                "<bg=blue;fg=white>                                                         </>",
+                "<bg=blue;fg=white>  Congratulations, you’ve installed the Drupal codebase  </>",
+                "<bg=blue;fg=white>  from the drupal/recommended-project template!          </>",
+                "<bg=blue;fg=white>                                                         </>",
+                "",
+                "<bg=yellow;fg=black>Next steps</>:",
+                "  * Install the site: https://www.drupal.org/docs/8/install",
+                "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
+                "  * Get support: https://www.drupal.org/support",
+                "  * Get involved with the Drupal community:",
+                "      https://www.drupal.org/getting-involved",
+                "  * Remove the plugin that prints this message:",
+                "      composer remove drupal/core-project-message"
+            ]
+        },
+        "drupal-lenient": {
+            "allowed-list": ["drupal/contact_block", "drupal/responsive_menus"]
+        },
+        "patches": {
+            "drupal/contact_block": {
+                "Make Contact Block compatible with Drupal 11": "https://www.drupal.org/files/issues/2024-03-16/contact_block.2.0.2.rector.patch"
+            },
+            "drupal/responsive_menus": {
+                "Bug fix": "https://git.drupalcode.org/project/responsive_menus/-/merge_requests/8.diff",
+                "Support D11 Type Manager": "patches/responsive_menus-d11-temp.patch"
+            }
+        }
+    },
+    "require-dev": {
+        "drupal/backward_compatibility": "^1.0",
+        "mglaman/composer-drupal-lenient": "^1.0"
+    }
+}
