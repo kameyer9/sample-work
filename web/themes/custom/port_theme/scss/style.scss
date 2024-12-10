@@ -449,11 +449,13 @@ div.region.region-breadcrumb {
 // Contact Us Styling
 
 #contact-message-feedback-form {
+  box-sizing: border-box;
+  padding: 80px 10%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
-  max-width: 1200px;
+  flex-direction: column;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 
@@ -463,6 +465,7 @@ div.region.region-breadcrumb {
     line-height: 25px;
     color: $color-font-dark;
     font-family: $font-secondary;
+    align-items: flex-start;
   }
 
   .form-text {
@@ -471,6 +474,10 @@ div.region.region-breadcrumb {
 
   .form-email {
     height: 38px;
+  }
+
+  #edit-message-0-value {
+    width: 100%;
   }
 
   #edit-actions {
@@ -483,17 +490,13 @@ div.region.region-breadcrumb {
       text-decoration: none;
       background-color: #1251e4;
       color: #fff;
-      margin: 0 10px;
       padding: 8px 20px;
       border-radius: 50px;
       transition: all 400ms ease-in-out;
 
       &:hover {
-        background-color: $color-hover-bg;
-        color: $color-primary;
+        background-color: #0d3aa5;
         }
       }
   }
 }
-
-

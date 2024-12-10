@@ -553,11 +553,13 @@ div.region.region-breadcrumb #block-port-theme-breadcrumbs > nav > ol > li > a:h
 }
 
 #contact-message-feedback-form {
+  box-sizing: border-box;
+  padding: 80px 10%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
-  max-width: 1200px;
+  flex-direction: column;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -567,6 +569,7 @@ div.region.region-breadcrumb #block-port-theme-breadcrumbs > nav > ol > li > a:h
   line-height: 25px;
   color: #333;
   font-family: "Brix sans Light", sans-serif;
+  align-items: flex-start;
 }
 #contact-message-feedback-form .form-text {
   height: 38px;
@@ -574,25 +577,25 @@ div.region.region-breadcrumb #block-port-theme-breadcrumbs > nav > ol > li > a:h
 #contact-message-feedback-form .form-email {
   height: 38px;
 }
+#contact-message-feedback-form #edit-message-0-value {
+  width: 100%;
+}
 #contact-message-feedback-form #edit-actions {
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: end;
 }
 #contact-message-feedback-form #edit-actions .button {
   display: inline-block;
   text-decoration: none;
   background-color: #1251e4;
   color: #fff;
-  margin: 0 10px;
   padding: 8px 20px;
   border-radius: 50px;
   transition: all 400ms ease-in-out;
 }
 #contact-message-feedback-form #edit-actions .button:hover {
-  background-color: rgba(18, 81, 228, 0.09);
-  color: #081f2c;
+  background-color: #0d3aa5;
 }
 
 >>>>>>> 90f751a (225 - sass work in progress)
