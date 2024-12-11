@@ -557,11 +557,19 @@ div.region.region-breadcrumb #block-port-theme-breadcrumbs > nav > ol > li > a:h
   padding: 80px 10%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  flex-direction: column;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+#contact-message-feedback-form > * {
+  flex-basis: 50%;
+}
+@media screen and (max-width: 800px) {
+  #contact-message-feedback-form > * {
+    flex-basis: 100%;
+  }
+}
+#contact-message-feedback-form .field--name-message {
+  flex-basis: 100%;
 }
 #contact-message-feedback-form .js-form-required {
   display: flex;
@@ -571,11 +579,12 @@ div.region.region-breadcrumb #block-port-theme-breadcrumbs > nav > ol > li > a:h
   font-family: "Brix sans Light", sans-serif;
   align-items: flex-start;
 }
-#contact-message-feedback-form .form-text {
-  height: 38px;
-}
+#contact-message-feedback-form .form-text,
 #contact-message-feedback-form .form-email {
   height: 38px;
+  width: 98%;
+  margin-left: 1%;
+  margin-right: 1%;
 }
 #contact-message-feedback-form #edit-message-0-value {
   width: 100%;
@@ -584,6 +593,7 @@ div.region.region-breadcrumb #block-port-theme-breadcrumbs > nav > ol > li > a:h
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-basis: 100%;
 }
 #contact-message-feedback-form #edit-actions .button {
   display: inline-block;
