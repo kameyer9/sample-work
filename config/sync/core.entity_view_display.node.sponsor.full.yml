@@ -1,0 +1,210 @@
+uuid: 082d1ff7-863f-43fc-be31-2a0a391655ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.sponsor.title
+    - core.entity_view_mode.node.full
+    - field.field.node.sponsor.body
+    - field.field.node.sponsor.field_about_us
+    - field.field.node.sponsor.field_address
+    - field.field.node.sponsor.field_contact_email
+    - field.field.node.sponsor.field_corporation
+    - field.field.node.sponsor.field_external_id
+    - field.field.node.sponsor.field_sponsor_website
+    - field.field.node.sponsor.layout_builder__layout
+    - node.type.sponsor
+  module:
+    - address
+    - layout_builder
+    - layout_discovery
+    - link
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout_builder_styles_style:
+            featured: featured
+        components:
+          a88074ae-79c7-4234-894d-62f60a7e4181:
+            uuid: a88074ae-79c7-4234-894d-62f60a7e4181
+            region: content
+            configuration:
+              id: 'field_block:node:sponsor:title'
+              label: 'Sponsor Name'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          column_widths: 25-75
+          layout_builder_styles_style:
+            featured: 0
+        components:
+          97536d06-71e8-433d-b081-915b9102d6c2:
+            uuid: 97536d06-71e8-433d-b081-915b9102d6c2
+            region: first
+            configuration:
+              id: 'field_block:node:sponsor:field_corporation'
+              label: Corporation
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          9cf521bd-5e0e-45b8-89b0-dd7f4c2f2ea3:
+            uuid: 9cf521bd-5e0e-45b8-89b0-dd7f4c2f2ea3
+            region: first
+            configuration:
+              id: 'field_block:node:sponsor:field_sponsor_website'
+              label: Website
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: link
+                label: above
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: '0'
+                  target: '0'
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          ee71aebd-9d31-48f3-9f2d-1eaf7b4bf3d3:
+            uuid: ee71aebd-9d31-48f3-9f2d-1eaf7b4bf3d3
+            region: second
+            configuration:
+              id: 'field_block:node:sponsor:body'
+              label: Body
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          24d834a6-da31-43a8-89f8-55167285b6b9:
+            uuid: 24d834a6-da31-43a8-89f8-55167285b6b9
+            region: second
+            configuration:
+              id: 'field_block:node:sponsor:field_about_us'
+              label: 'About Us'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+id: node.sponsor.full
+targetEntityType: node
+bundle: sponsor
+mode: full
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_about_us:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_address:
+    type: address_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_contact_email:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_corporation:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_external_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_sponsor_website:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  layout_builder__layout: true
