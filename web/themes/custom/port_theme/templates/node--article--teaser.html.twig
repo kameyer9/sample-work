@@ -1,0 +1,14 @@
+<div{{ attributes }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+{% include '@port_theme/components/highlighted_teaser/_highlighted_teaser.html.twig' with {
+  title: label,
+  thumbnail: content.field_image.0,
+  body: content.body,
+  url: url,
+  url_text: 'Read More'
+} %}
+
+{{ content|without('field_image', 'body') }}
+</div>

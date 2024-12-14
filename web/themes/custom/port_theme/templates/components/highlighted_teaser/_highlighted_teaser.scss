@@ -1,0 +1,44 @@
+@use "../../../scss/variables.scss" as *;
+
+.highlighted_teaser {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    background-color: #e0e5f1;
+    border-radius: 6px;
+    padding: 24px;
+    margin: 1.5rem auto;
+
+    img {
+        max-width: 50%;
+        height: auto;
+        vertical-align: middle;
+    }
+
+    .teaser-text {
+        h2 {
+            color: #081f2c;
+            font-size: 24px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            line-height: 32px;
+            font-weight: 400;
+        }
+
+        a {
+            text-decoration: none;
+            background: #1251e4;
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 50px;
+            transition: all .4s ease-in-out;
+            display: inline-block;
+
+            &:hover {
+                background: #0d3aa5;
+            }
+        }
+    }
+}
