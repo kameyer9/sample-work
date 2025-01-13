@@ -1,0 +1,255 @@
+uuid: 3f69dd9a-7224-406e-ae8b-e8f07955130c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.full
+    - field.field.media.external_video.field_conference
+    - field.field.media.external_video.field_description
+    - field.field.media.external_video.field_featured_video
+    - field.field.media.external_video.field_media_oembed_video_1
+    - field.field.media.external_video.field_media_video_embed_field
+    - field.field.media.external_video.field_recording_date
+    - field.field.media.external_video.field_speaker
+    - field.field.media.external_video.field_sponsor
+    - field.field.media.external_video.field_version
+    - field.field.media.external_video.field_video_category
+    - field.field.media.external_video.layout_builder__layout
+    - media.type.external_video
+  module:
+    - datetime
+    - layout_builder
+    - layout_discovery
+    - media
+    - system
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout_builder_styles_style:
+            featured: featured
+        components:
+          3633cae7-961c-4e16-81c8-20b590b76d75:
+            uuid: 3633cae7-961c-4e16-81c8-20b590b76d75
+            region: content
+            configuration:
+              id: 'field_block:media:external_video:field_media_oembed_video_1'
+              label: 'Remote video URL'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: oembed
+                label: visually_hidden
+                settings:
+                  max_width: 741
+                  max_height: 400
+                  loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          f4cfff88-8104-4f2c-aed3-bc0dfcac9ed2:
+            uuid: f4cfff88-8104-4f2c-aed3-bc0dfcac9ed2
+            region: content
+            configuration:
+              id: 'extra_field_block:media:external_video:content_moderation_control'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Breadcrumb
+          context_mapping: {  }
+          layout_builder_styles_style:
+            featured: 0
+            hidden: 0
+        components:
+          a6b7e917-b4bc-4f7c-b789-cc4918d7b7e6:
+            uuid: a6b7e917-b4bc-4f7c-b789-cc4918d7b7e6
+            region: content
+            configuration:
+              id: system_breadcrumb_block
+              label: Breadcrumbs
+              label_display: '0'
+              provider: system
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          9e68700a-f7eb-4952-a24e-b0e9cecaab9d:
+            uuid: 9e68700a-f7eb-4952-a24e-b0e9cecaab9d
+            region: content
+            configuration:
+              id: 'field_block:media:external_video:field_conference'
+              label: Conference
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          ba380c67-a81b-4ed4-8627-6c995f60c9ad:
+            uuid: ba380c67-a81b-4ed4-8627-6c995f60c9ad
+            region: content
+            configuration:
+              id: 'field_block:media:external_video:field_description'
+              label: 'Video Description'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: basic_string
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          c6ca4db8-86b3-474a-affa-57d1052336f2:
+            uuid: c6ca4db8-86b3-474a-affa-57d1052336f2
+            region: content
+            configuration:
+              id: 'field_block:media:external_video:name'
+              label: Name
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
+id: media.external_video.full
+targetEntityType: media
+bundle: external_video
+mode: full
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_conference:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_featured_video:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_media_oembed_video_1:
+    type: oembed
+    label: visually_hidden
+    settings:
+      max_width: 0
+      max_height: 0
+      loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_media_video_embed_field:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_recording_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_speaker:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_sponsor:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_version:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_video_category:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+hidden:
+  created: true
+  layout_builder__layout: true
+  name: true
+  thumbnail: true
+  uid: true
