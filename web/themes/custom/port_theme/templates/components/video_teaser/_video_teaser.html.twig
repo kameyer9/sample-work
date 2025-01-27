@@ -1,0 +1,27 @@
+<div class="video_teaser">
+	<div class="video-thumbnail">
+
+		<a href="{{ url }}">
+			{{ thumbnail }}
+		</a>
+		<div>
+			<a href="{{ url }}">Watch Now</a>
+		</div>
+
+	</div>
+
+	<div class="video-content">
+		{{ link_multiple }}{{ link_single }}
+                <h3><a href="{{ url }}">{{ title }}</a></h3>
+		<div class="video-date">
+		<p> 
+			{{ "Created " ~ field_date }}
+
+		</p>
+		</div>
+		<div class="video_teaser_summary">
+			{{ summary }}
+		</div>
+
+	</div>
+</div>
